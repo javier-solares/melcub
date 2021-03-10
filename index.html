@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CUBO</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box">
+            <div class="lado">
+                <a href="S1.jpg"> <img src="S1.jpg" alt="" /></a>
+            </div>
+            <div class="lado">
+                <a href="S2.jpg"> <img src="S2.jpg" alt="" /></a>
+            </div>
+            <div class="lado">
+                <a href="S3.jpg"> <img src="S3.jpg" alt="" /></a>
+            </div>
+            <div class="lado">
+                <a href="S4.jpg"> <img src="S4.jpg" alt="" /></a>
+            </div>
+            <div class="lado">
+                <a href="S5.jpg"> <img src="S5.jpg" alt="" /></a>
+            </div>
+            <div class="lado">
+                <a href="S6.jpg"> <img src="S6.jpg" alt="" /></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="galeria" id="galeria">
+        <div class="img">
+            <img class="img1" src="./S1.jpg" alt="" />
+        </div>
+        <div class="img">
+            <img class="img2" src="S2.jpg" alt="" />
+        </div>
+        <div class="img">
+            <img class="img3" src="S3.jpg" alt="" />
+        </div>
+        <div class="img">
+            <img class="img4" src="S4.jpg" alt="" />
+        </div>
+        <div class="img">
+            <img class="img5" src="S5.jpg" alt="" />
+        </div>
+        <div class="img">
+            <img class="img6" src="S6.jpg" alt="" />
+        </div>
+    </div>
+
+    <script>
+        let box = document.getElementById("box");
+        let galeria = document.getElementById("galeria");
+
+        galeria.addEventListener("click", (e) => {
+            let dato = e.target.className;
+
+            switch (dato) {
+                case "img1":
+                    box.style.transform = "rotateY(0deg)";
+                    break;
+                case "img2":
+                    box.style.transform = "rotateY(-90deg)";
+                    break;
+                case "img3":
+                    box.style.transform = "rotateY(90deg)";
+                    break;
+                case "img4":
+                    box.style.transform = "rotateY(180deg)";
+                    break;
+                case "img5":
+                    box.style.transform = "rotateX(-90deg)";
+                    break;
+                case "img6":
+                    box.style.transform = "rotateX(90deg)";
+                    break;
+                default:
+                    console.log("Galeria Con Efecto 3D :S ");
+                    break;
+            }
+        });
+    </script>
+</body>
+
+</html>
